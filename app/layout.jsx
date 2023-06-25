@@ -1,0 +1,22 @@
+import "@styles/globals.css";
+import { Children } from "react";
+
+export const metadata = {
+  title: "Promptropica",
+  description: "Discover and Share AI prompts",
+};
+
+const RootLayout = () => {
+  return (
+    <html lang="en">
+      <body>
+        <div className="main">
+          <div className="graident" />
+        </div>
+        <main className="app">{children}</main>
+      </body>
+    </html>
+  );
+};
+
+export default RootLayout;

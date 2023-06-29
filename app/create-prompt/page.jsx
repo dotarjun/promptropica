@@ -2,11 +2,14 @@
 
 import { useState } from 'react'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'next/router'
+import { useRouter } from 'next/navigation'
 
 import Form from '@components/Form'
 
 const CreatePrompt = () => {
+    const router = useRouter();
+    const { data: session } = useSession();
+
     const [Submitting, setSubmitting] = useState(false)
     const [Post, setPost] = useState({
         prompt: '',
@@ -26,7 +29,6 @@ const CreatePrompt = () => {
                     tag: Post.tag,
                 }),
             })
-
             if (res.ok) {
                 router.push('/')
             }

@@ -9,6 +9,7 @@ export const POST = async (req, res) => {
         await connectToDatabase();
         const newPrompt = new Prompt({
             creator: userId,
+            prompt,
             tag
         });
 

@@ -10,16 +10,19 @@ export const POST = async (req, res) => {
         const newPrompt = new Prompt({
             creator: userId,
             prompt,
-            tag
+            tag,
         });
-
+        console.log('newPrompt', newPrompt);
         await newPrompt.save();
-
+        console.log('saved newPrompt')
         return new Response(JSON.stringify(newPrompt), {
             status: 201,
         })
 
     } catch (error) {
-
+        console.log('------ error ----- \n', error);
+        return new Response("Failed to create a new prompt", {
+            status: 500,
+        })
     }
 }

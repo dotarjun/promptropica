@@ -6,6 +6,7 @@ import { Children } from "react";
 export const metadata = {
   title: "Promptropica",
   description: "Discover and Share AI prompts",
+  favicon: "/assets/favicon.ico",
 };
 
 const RootLayout = ({ children }) => {

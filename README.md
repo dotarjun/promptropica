@@ -1,6 +1,6 @@
 # Promptropica
 
-Promptropica is an open-source AI prompting tool designed for the modern world. This tool assists you in discovering, creating, and sharing creative prompts. It is a full-stack CRUD application built with Next.js 13. The technology stack includes Next.js, MongoDB, Next Auth, and Tailwind CSS.
+Promptropica is an AI prompting tool designed for the modern world. This tool assists you in discovering, creating, and sharing creative prompts. It is a full-stack CRUD application built with Next.js 13. The technology stack includes Next.js, MongoDB, Next Auth, and Tailwind CSS.
 
 ## Features
 

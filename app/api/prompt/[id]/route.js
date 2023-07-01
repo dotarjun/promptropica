@@ -42,11 +42,27 @@ export const PATCH = async (req, { params }) => {
         await existingPrompt.save()
 
         return new Response(JSON.stringify(existingPrompt), { status: 200 })
-    }
-    catch (error) {
+    } catch (error) {
         return new Response('Failed to update prompt', { status: 500 })
     }
 }
 
-
 // DELETE
+export const DELETE = async (req, { params }) => {
+    const { prompt } = await req.json();
+
+    try {
+        await connectToDatabase();
+        const existingPrompt = await Prompt.findById(params.id)
+
+        if (!existingPrompt) {
+            return new Response('Prompt not found', { status: 404 })
+        }
+
+        await existingPrompt.remove()
+
+        return new Response(JSON.stringify(existingPrompt), { status: 200 })
+    } catch (error) {
+        return new Response('Failed to delete prompt', { status: 500 })
+    }
+}

@@ -65,7 +65,22 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
       <p
         className="font-inter text-sm blue_gradient cursor-pointer"
         onClick={() => handleTagClick && handleTagClick(post.tag)}>
-        #{post.tag}
+        {
+          // write the code to split post.tag with spaces and check if there is a #
+          // if there is a #, then remove the # and then add # to each split tag
+          // if there isnt a # then add # to each split tag
+          // write the code below
+          post.tag.split(" ").map((tag) => {
+            const formattedTag = tag.trim(); // Remove any leading/trailing spaces
+            return (
+              <span key={formattedTag}>
+                {formattedTag.startsWith("#")
+                  ? formattedTag
+                  : `#${formattedTag}`}
+              </span>
+            );
+          })
+        }
       </p>
 
       {session?.user.id === post.creator._id && pathName === "/profile" && (

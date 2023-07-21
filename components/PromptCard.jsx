@@ -76,7 +76,7 @@ const PromptCard = ({ post, handleEdit, handleDelete, handleTagClick }) => {
               <span key={formattedTag}>
                 {formattedTag.startsWith("#")
                   ? formattedTag
-                  : `#${formattedTag}`}
+                  : `#${formattedTag} `}
               </span>
             );
           })

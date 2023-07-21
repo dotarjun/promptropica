@@ -26,7 +26,7 @@ const handler = NextAuth({
 
         if (!userExists) {
           const username =
-            profile.name !== ""
+            profile.name !== "" && profile.name.includes(" ")
               ? profile.name.split(" ").join("").toLowerCase()
               : profile.email.split("@")[0];
 

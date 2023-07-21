@@ -30,6 +30,10 @@ const handler = NextAuth({
                         .join('')
                         .toLowerCase();
 
+                    if (username === '') {
+                        username = profile.email.split('@')[0];
+                    }
+
                     await User.create({
                         email: profile.email,
                         name: profile.name,

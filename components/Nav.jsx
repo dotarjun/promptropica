@@ -10,7 +10,7 @@ const Nav = () => {
 
   const [Providers, setProviders] = useState(null);
 
-  const [ToggleDropdown, setToggleDropdown] = useState(false)
+  const [ToggleDropdown, setToggleDropdown] = useState(false);
 
   useEffect(() => {
     const setUpProviders = async () => {
@@ -88,15 +88,13 @@ const Nav = () => {
                 <Link
                   href="/profile"
                   className="dropdown_link"
-                  onClick={() => (setToggleDropdown(false))}
-                >
+                  onClick={() => setToggleDropdown(false)}>
                   My Profile
                 </Link>
                 <Link
                   href="/create-prompt"
                   className="dropdown_link"
-                  onClick={() => (setToggleDropdown(false))}
-                >
+                  onClick={() => setToggleDropdown(false)}>
                   Create Prompt
                 </Link>
                 <button
@@ -105,11 +103,9 @@ const Nav = () => {
                     setToggleDropdown(false);
                     signOut();
                   }}
-                  className="mt-5 w-full black_btn"
-                >
+                  className="mt-5 w-full black_btn">
                   Sign Out
                 </button>
-
               </div>
             )}
           </div>

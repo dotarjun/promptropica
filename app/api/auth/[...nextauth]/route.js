@@ -25,14 +25,11 @@ const handler = NextAuth({
                 const userExists = await User.findOne({ email: profile.email });
 
                 if (!userExists) {
-                    const username = profile.name
+                    const username = profile.name !== '' ? profile.name
                         .split(' ')
                         .join('')
-                        .toLowerCase();
-
-                    if (username === '') {
-                        username = profile.email.split('@')[0];
-                    }
+                        .toLowerCase()
+                        : username = profile.email.split('@')[0];
 
                     await User.create({
                         email: profile.email,

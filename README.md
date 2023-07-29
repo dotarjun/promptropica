@@ -1,7 +1,16 @@
+# Promptropica
 ![image](https://github.com/dotarjun/promptropica/assets/71163609/21514da5-f3ff-42d7-a9cb-53ad370ac00d)
 
+# Table of Contents
 
-# Promptropica
+- [Overview](#overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+- [Contributing](#contributing) 
+- [License](#license)
+
+## Overview
 
 Promptropica is an AI prompting tool designed for the modern world. This tool assists you in discovering, creating, and sharing creative prompts. It is a full-stack CRUD application built with Next.js 13. The technology stack includes Next.js, MongoDB, Next Auth, and Tailwind CSS.
 
@@ -85,9 +94,3 @@ git push origin feature/your-feature
 ## License
 
 Promptropica is licensed under the [MIT License](https://github.com/dotarjun/promptropica/blob/main/LICENSE).
-
-
-
-## Contact
-
-For any inquiries or feedback, please reach out to the project maintainer, Arjun (arjun@arjunsingh.tech).
